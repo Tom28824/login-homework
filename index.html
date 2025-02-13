@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> login homework </title>
+    </head>
+    <style>
+        .co {color: purple}
+        .ff {font-family: lucida Handwriting}
+    </style>
+    <body>
+        <div class="co ff"><h1>LOGIN</h1></div>
+        <label> Email: </label>
+        <input id="input">
+        <br>
+        <label> Password: </label>
+        <input id="pass">
+        <div id="output"> Please enter email </div>
+        <button onclick="validate()"> Sumbit</button>
+        <script>
+        
+             function validate(){
+                let email = document.getElementById("input").value
+                let password = document.getElementById("pass").value
+                let output = document.getElementById("output")
+        
+                if ( email.length == 0)
+                    { output.innerHTML = " email cannot be blank" }
+                else if ((email.indexOf("@") < email.lastIndexOf(".")) && (password.length != 0))
+                    { output.innerHTML = "email submitted"}
+                else if (password.length == 0)
+                    { output.innerHTML = " password cannot be blank"}
+                else
+                    { output.innerHTML = "invalid email"}
+             }
+        </script>
+    </body>
+</html>
